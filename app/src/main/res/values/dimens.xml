@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="user_info_bio_padding">16dp</dimen>
+    <dimen name="user_info_content_container_padding">12dp</dimen>
+    <dimen name="user_info_title_icon_padding">28dp</dimen>
+
+    <dimen name="user_info_text_size">20sp</dimen>
+</resources>

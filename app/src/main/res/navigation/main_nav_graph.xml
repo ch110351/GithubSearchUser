@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav_graph"
+    app:startDestination="@id/userSearchFragment">
+
+    <fragment
+        android:id="@+id/userSearchFragment"
+        android:name="com.example.githubsearchuser.ui.UserSearchFragment"
+        android:label="@string/user_list_fragment_label"
+        tools:layout="@layout/user_list_fragment">
+        <action
+            android:id="@+id/action_userListFragment_to_userInfoFragment"
+            app:destination="@id/userInfoFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/userInfoFragment"
+        android:name="com.example.githubsearchuser.ui.UserInfoFragment"
+        android:label="@string/user_info_fragment_label"
+        tools:layout="@layout/user_info_fragment">
+        <argument
+            android:name="userLogin"
+            app:argType="string"
+            app:nullable="false" />
+    </fragment>
+
+
+</navigation>

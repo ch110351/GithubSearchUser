@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">GithubSearchUser</string>
+    <string name="user_list_fragment_label">Github Search User</string>
+    <string name="user_info_fragment_label">Github User Info</string>
+    <string name="staff">STAFF</string>
+    <string name="input_username_hint">Please Input username</string>
+    <string name="common_error_server">Server Error</string>
+    <string name="common_error_request">Error Request</string>
+    <string name="network_not_available">Network not available</string>
+</resources>
