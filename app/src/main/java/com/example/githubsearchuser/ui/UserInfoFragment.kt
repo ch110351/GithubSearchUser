@@ -1,6 +1,7 @@
 package com.example.githubsearchuser.ui
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -45,6 +46,7 @@ class UserInfoFragment : Fragment() {
                     when (result) {
                         is ResponseResult.Success -> {
                             viewBinding.progressBar.visibility = View.GONE
+                            Log.d("Wesley", result.toString())
                             result.let { userinfo ->
                                 viewBinding.user = userinfo.data
                             }
@@ -64,5 +66,7 @@ class UserInfoFragment : Fragment() {
                     }
                 })
         }
+
+
     }
 }

@@ -20,5 +20,3 @@ sealed class ResponseResult<out T> {
     object Pending : ResponseResult<Nothing>()
     object Complete : ResponseResult<Nothing>()
 }
-
-

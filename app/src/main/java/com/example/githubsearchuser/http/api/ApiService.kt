@@ -3,6 +3,7 @@ package com.example.githubsearchuser.http.api
 
 import com.example.githubsearchuser.data.SearchUserResponse
 import com.example.githubsearchuser.data.UserInfo
+import com.example.githubsearchuser.data.UserRepos
 import retrofit2.http.GET
 import retrofit2.http.Path
 import retrofit2.http.Query
@@ -15,6 +16,13 @@ interface ApiService {
     suspend  fun getUserInfo(
         @Path("login") login: String
     ): UserInfo
+
+    @GET("users/{login}/repos")
+    suspend  fun getUserRepos(
+        @Path("login") login: String,
+        @Query("page") page: Int,
+        @Query("per_page") pageSize: Int
+    ): UserRepos
 
     /**
      * github api, search user by login

@@ -2,6 +2,7 @@ package com.example.githubsearchuser.data
 
 
 import com.google.gson.annotations.SerializedName
+
 /**
  * response
  */
@@ -41,6 +42,19 @@ data class UserInfo(
     @SerializedName("name")
     val name: String,
     @SerializedName("site_admin")
-    val siteAdmin: Boolean
+    val siteAdmin: Boolean,
+    var repos: List<UserReposItem>
 )
+
+class UserRepos : ArrayList<UserReposItem>()
+
+data class UserReposItem(
+    @SerializedName("description")
+    val description: String,
+    @SerializedName("id")
+    val id: Int,
+    @SerializedName("name")
+    val name: String
+)
+
 

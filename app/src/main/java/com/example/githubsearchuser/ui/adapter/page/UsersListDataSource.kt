@@ -5,13 +5,13 @@ import androidx.lifecycle.MutableLiveData
 import androidx.paging.PageKeyedDataSource
 import com.example.githubsearchuser.data.ResponseResult
 import com.example.githubsearchuser.data.UserItem
-import com.example.githubsearchuser.repository.ApiRepository
+import com.example.githubsearchuser.repository.UserRepository
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.SupervisorJob
 import kotlinx.coroutines.launch
 
-class UsersListDataSource(private val apiRepository: ApiRepository, private val username: String?) :
+class UsersListDataSource(private val apiRepository: UserRepository, private val username: String?) :
     PageKeyedDataSource<Int, UserItem>() {
     private val dataSourceJob = SupervisorJob()
     private val scope = CoroutineScope(Dispatchers.Main + dataSourceJob)

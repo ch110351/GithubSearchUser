@@ -3,10 +3,11 @@ package com.example.githubsearchuser.ui.adapter.page
 import androidx.lifecycle.MutableLiveData
 import androidx.paging.DataSource
 import com.example.githubsearchuser.data.UserItem
-import com.example.githubsearchuser.repository.ApiRepository
+
+import com.example.githubsearchuser.repository.UserRepository
 
 class UsersListDataSourceFactory(
-    private val apiRepository: ApiRepository
+    private val apiRepository: UserRepository
 ) : DataSource.Factory<Int, UserItem>() {
 
     private var username: String? = null

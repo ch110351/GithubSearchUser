@@ -2,9 +2,7 @@ package com.example.githubsearchuser.common
 
 import android.app.Application
 import android.content.Context
-import com.example.githubsearchuser.di.factoryModule
-import com.example.githubsearchuser.di.repositoryModule
-import com.example.githubsearchuser.di.userListSourceFactory
+import com.example.githubsearchuser.di.*
 import org.koin.core.context.startKoin
 
 class BaseApplication : Application() {
@@ -19,9 +17,10 @@ class BaseApplication : Application() {
         startKoin {
             modules(
                 listOf(
-                    factoryModule,
-                    repositoryModule,
-                    userListSourceFactory
+                    viewModelModule,
+                    userListSourceFactory,
+                    networkModule,
+                    repositoryModule
                 )
             )
         }
